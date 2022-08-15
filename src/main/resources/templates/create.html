@@ -7,7 +7,7 @@
 <body>
 
 
-<form th:if="${entity == 'warmup'}">
+<form th:if="${entity == 'warmup'}" th:method="post" th:action="@{/save/warmup}">
     <h1><span th:text="${entity}"></span> Scaffolding</h1>
     <label th:for="${entity} + 'title'"><span th:text="${entity}"></span> Title</label>
     <input th:name="title" th:id="${entity} + 'title'" type="text" th:placeholder="${'create a ' + entity + ' title'}">
@@ -20,7 +20,8 @@
 
 <button type="submit">Create <span th:text="${entity}"></span></button> </form>
 
-<form th:if="${entity == 'resource'}">
+<form th:if="${entity == 'resource'}" th:method="post" th:action="@{/save/resource}">
+
     <h1><span th:text="${entity}"></span> Scaffolding</h1>
     <label th:for="${entity} + 'title'"><span th:text="${entity}"></span> Title</label>
     <input th:name="title" th:id="${entity} + 'title'" type="text" th:placeholder="${'create a ' + entity + ' title'}">
@@ -31,7 +32,7 @@
 
     <button type="submit">Create <span th:text="${entity}"></span></button> </form>
 
-<form th:if="${entity == 'student'}">
+<form th:if="${entity == 'student'}" th:method="post" th:action="@{/save/student}">
     <h1><span th:text="${entity}"></span> Scaffolding</h1>
     <label th:for="${entity} + 'FullName'"><span th:text="${entity}"></span> Full Name</label>
     <input th:name="title" th:id="${entity} + 'FullName'" type="text" th:placeholder="${'insert a ' + entity + ' name'}">
