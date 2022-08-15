@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
 
-    @GetMapping("/hello")
+    @GetMapping("/home")
     public String helloView(Model model){
 
         model.addAttribute("testVariable", "String thang");

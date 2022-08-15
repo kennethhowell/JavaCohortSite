@@ -6,11 +6,42 @@
 </head>
 <body>
 
-<form>
-    <label for="title"><span th:text="${entity}"></span> Title</label>
-    <input th:name="title" id="title" type="text" th:placeholder="${'make a ' + entity}">
-    .
+
+<form th:if="${entity == 'warmup'}">
+    <h1><span th:text="${entity}"></span> Scaffolding</h1>
+    <label th:for="${entity} + 'title'"><span th:text="${entity}"></span> Title</label>
+    <input th:name="title" th:id="${entity} + 'title'" type="text" th:placeholder="${'create a ' + entity + ' title'}">
+
+    <label th:for="${entity} + 'body'" ><span th:text="${entity}"></span> Body</label>
+    <input th:name="title" th:id="${entity} + 'body'" type="text" th:placeholder="${'create a ' + entity + ' body'}">
+
+    <label th:for="${entity} + 'category'"><span th:text="${entity}"></span> Category</label>
+    <input th:name="title" th:id="${entity} + 'category'" type="text" th:placeholder="${'create a ' + entity + ' category'}">
+
 <button type="submit">Create <span th:text="${entity}"></span></button> </form>
+
+<form th:if="${entity == 'resource'}">
+    <h1><span th:text="${entity}"></span> Scaffolding</h1>
+    <label th:for="${entity} + 'title'"><span th:text="${entity}"></span> Title</label>
+    <input th:name="title" th:id="${entity} + 'title'" type="text" th:placeholder="${'create a ' + entity + ' title'}">
+
+    <label th:for="${entity} + 'url'" ><span th:text="${entity}"></span> URL</label>
+    <input th:name="title" th:id="${entity} + 'url'" type="text" th:placeholder="${'insert a ' + entity + ' url'}">
+
+
+    <button type="submit">Create <span th:text="${entity}"></span></button> </form>
+
+<form th:if="${entity == 'student'}">
+    <h1><span th:text="${entity}"></span> Scaffolding</h1>
+    <label th:for="${entity} + 'FullName'"><span th:text="${entity}"></span> Full Name</label>
+    <input th:name="title" th:id="${entity} + 'FullName'" type="text" th:placeholder="${'insert a ' + entity + ' name'}">
+
+    <label th:for="${entity} + 'GitHubLink'" ><span th:text="${entity}"></span> github</label>
+    <input th:name="title" th:id="${entity} + 'GitHubLink'" type="text" th:placeholder="${'insert a ' + entity + ' github link'}">
+
+
+
+    <button type="submit">Create <span th:text="${entity}"></span></button> </form>
 
 </body>
 </html>
