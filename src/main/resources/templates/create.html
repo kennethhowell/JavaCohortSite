@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${createViewTitle}">Title</title>
+</head>
+<body>
+
+<form>
+    <label for="title"><span th:text="${entity}"></span> Title</label>
+    <input th:name="title" id="title" type="text" th:placeholder="${'make a ' + entity}">
+    .
+<button type="submit">Create <span th:text="${entity}"></span></button> </form>
+
+</body>
+</html>
